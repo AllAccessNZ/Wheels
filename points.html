@@ -1,18 +1,38 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
 <html lang="en">
     <head>
         <meta charset="utf-8">
 
-        <title>The HTML5 Herald</title>
-        <meta name="description" content="The HTML5 Herald">
-        <meta name="author" content="SitePoint">
+        <title>Wheels Leaderboard</title>
+        <meta name="description" content="NZTA All Access Hackathon Submission Form">
+        <meta name="author" content="Arrow_Head">
 
-        <link rel="stylesheet" href="css/styles.css">
-
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
-        
+        <div class="block_element">
+                <form align="center">
+                    <div class="top_side">
+                        <input type="text" name="firstname" placeholder="First Name">
+                        <input type="text" name="lastname" placeholder="Last Name">
+                    </div>
+                    <div class="middle_side">
+                        <input type="text" name="location" placeholder="Location">
+                        <select>
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="Wheel Chair">Wheel Chair</option>
+                                <option value="Hearing">Hearing</option>
+                                <option value="Visual">Visual</option>
+                                <option value="Sensory">Sensory</option>
+                        </select>
+                    </div>
+
+                    <textarea name="decription" cols="50" rows="10" placeholder="Description.." required></textarea><br>
+
+                    <input type="submit" name-"submit">
+                </form>
+        </div>
     </body>
 </html>
