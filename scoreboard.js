@@ -1,5 +1,4 @@
 window.onload = function(){
-
     fetch('http://localhost:6969/board/getLeaderboard')
 .then(response => response.json())
 .then(data => {
@@ -55,12 +54,30 @@ for (var i = 0; i < users.length; i++){
   var title = document.createTextNode("points");
   titleSpan.className = "sub";
 
+  // Button div
+  var buttonDiv = document.createElement("div");
+  buttonDiv.className = "name";
+
+  // Buttons
+  var upButton = document.createElement("button");
+  upButton.onclick = function() { alert('blah'); };
+  var upText = document.createTextNode("Upload");
+  var downButton = document.createElement("button");
+  var downText = document.createTextNode("Downvote");
+  upButton.appendChild(upText);
+  downButton.appendChild(downText);
+
+  // Append button to div
+  buttonDiv.appendChild(upButton);
+  buttonDiv.appendChild(downButton);
+
   // Append title to title span
   titleSpan.appendChild(title);
 
   // Append title span to the details div
   detailsDiv.appendChild(titleSpan);
 
+  entry.appendChild(buttonDiv);
   entry.appendChild(detailsDiv);
 
   var element = document.getElementById("table");
@@ -72,3 +89,12 @@ for (var i = 0; i < users.length; i++){
 .catch(error => console.error(error))
 }
 
+document.getElementById("myBtn").addEventListener("click", alert("HELLO"));
+
+function upvote() {
+  alert("Upvote");
+}
+
+function downvote() {
+  alert("Downvote");
+}
